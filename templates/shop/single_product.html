@@ -1,0 +1,283 @@
+{% extends 'shop/base_shop.html' %}
+
+{% block content %}
+<div class="container">
+    <br>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="product-page-product-wrap jqzoom-stage jqzoom-stage-lg">
+                <div class="clearfix">
+                    <a href="/static/img/800x800.png" id="jqzoom" data-rel="gal-1">
+                        <img src="/static/img/500x500.png" alt="Image Alternative text" title="Image Title" />
+                    </a>
+                </div>
+            </div>
+            <ul class="jqzoom-list">
+                <li>
+                    <a class="zoomThumbActive" href="javascript:void(0)" data-rel="{gallery:'gal-1', smallimage: 'img/500x500.png', largeimage: 'img/800x800.png'}">
+                        <img src="/static/img/100x100.png" alt="Image Alternative text" title="Image Title" />
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" data-rel="{gallery:'gal-1', smallimage: 'img/500x500.png', largeimage: 'img/800x800.png'}">
+                        <img src="/static/img/100x100.png" alt="Image Alternative text" title="Image Title" />
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" data-rel="{gallery:'gal-1', smallimage: 'img/500x500.png', largeimage: 'img/800x800.png'}">
+                        <img src="/static/img/100x100.png" alt="Image Alternative text" title="Image Title" />
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" data-rel="{gallery:'gal-1', smallimage: 'img/500x500.png', largeimage: 'img/800x800.png'}">
+                        <img src="/static/img/100x100.png" alt="Image Alternative text" title="Image Title" />
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" data-rel="{gallery:'gal-1', smallimage: 'img/500x500.png', largeimage: 'img/800x800.png'}">
+                        <img src="/static/img/100x100.png" alt="Image Alternative text" title="Image Title" />
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <div class="_box-highlight">
+                <ul class="product-page-product-rating">
+                    <li class="rated"><i class="fa fa-star"></i>
+                    </li>
+                    <li class="rated"><i class="fa fa-star"></i>
+                    </li>
+                    <li class="rated"><i class="fa fa-star"></i>
+                    </li>
+                    <li class="rated"><i class="fa fa-star"></i>
+                    </li>
+                    <li class="rated"><i class="fa fa-star"></i>
+                    </li>
+                </ul>
+                <p class="product-page-product-rating-sign"><a href="#">238 customer reviews</a>
+                </p>
+                <h1>Vera Bradley Round Travel Bag</h1>
+                <p class="product-page-price">$59.99</p>
+                <p class="text-muted text-sm">Free Shipping</p>
+                <p class="product-page-desc-lg">Go ahead, make it a “round” trip! This new duffel offers a unique round shape that makes it so easy to pack. Three multifunction interior pockets keep smaller items organized, while a front and side slip pocket keeps essentials
+                    always conveniently within reach.</p>
+                <ul class="product-page-option-list">
+                    <li class="clearfix">
+                        <h5 class="product-page-option-title">Color</h5>
+                        <select class="product-page-option-select">
+                            <option selected>Clementine</option>
+                            <option>Fanfare</option>
+                            <option>Flower Shower</option>
+                            <option>Flutterby</option>
+                            <option>Petal Paisley</option>
+                            <option>Ziggy Zinnia</option>
+                        </select>
+                    </li>
+                    <li class="clearfix">
+                        <h5 class="product-page-option-title">Size</h5>
+                        <select class="product-page-option-select">
+                            <option selected>Normal</option>
+                            <option>Large</option>
+                            <option>Small</option>
+                        </select>
+                    </li>
+                </ul>
+                <ul class="product-page-actions-list">
+                    <li class="product-page-qty-item">
+                        <button class="product-page-qty product-page-qty-minus">-</button>
+                        <input class="product-page-qty product-page-qty-input" type="text" value="1" />
+                        <button class="product-page-qty product-page-qty-plus">+</button>
+                    </li>
+                    <li><a class="btn btn-lg btn-primary" href="#/"><i class="fa fa-shopping-cart"></i>Add to Cart</a>
+                    </li>
+                    <li><a class="btn btn-lg btn-default" href="#/"><i class="fa fa-star"></i>Wishlist</a>
+                    </li>
+                </ul>
+                <div class="gap gap-small"></div>
+            </div>
+        </div>
+    </div>
+    <div class="gap"></div>
+    <div class="tabbable product-tabs">
+        <ul class="nav nav-tabs" id="myTab">
+            <li class="active"><a data-target="#tab-1" data-toggle="tab">Description</a>
+            </li>
+            <li><a data-target="#tab-2" data-toggle="tab">Additional Information</a>
+            </li>
+            <li><a data-target="#tab-3" data-toggle="tab">Rating and Reviews</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade in active" id="tab-1">
+                <p>{{ product.description }}</p>
+            </div>
+            <div class="tab-pane fade" id="tab-2">
+                <table class="table">
+                    <tbody>
+                    <tr>
+                        <td>Weight:</td>
+                        <td>0.3 kg</td>
+                    </tr>
+                    <tr>
+                        <td>Dimensions:</td>
+                        <td>20 ½" W x 12" H x 10 ¾" D with 9" strap drop and 52" removable, adjustable strap</td>
+                    </tr>
+                    <tr>
+                        <td>Materials :</td>
+                        <td>100% Cotton</td>
+                    </tr>
+                    <tr>
+                        <td>Care Tips:</td>
+                        <td>Machine wash cold, gentle cycle, only non-chlorine bleach when needed; line dry</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="tab-pane fade" id="tab-3">
+                <div class="row">
+                    <div class="col-md-8">
+                        <article class="product-review">
+                            <div class="product-review-author">
+                                <img class="product-review-author-img" src="/static/img/70x70.png" alt="Image Alternative text" title="Image Title" />
+                            </div>
+                            <div class="product-review-content-full">
+                                <h5 class="product-review-title">Terrific Buy!</h5>
+                                <ul class="product-page-product-rating">
+                                    <li class="rated"><i class="fa fa-star"></i>
+                                    </li>
+                                    <li class="rated"><i class="fa fa-star"></i>
+                                    </li>
+                                    <li class="rated"><i class="fa fa-star"></i>
+                                    </li>
+                                    <li class="rated"><i class="fa fa-star"></i>
+                                    </li>
+                                    <li class="rated"><i class="fa fa-star"></i>
+                                    </li>
+                                </ul>
+                                <p class="product-review-meta">by Alison Mackenzie on 08/14/2015</p>
+                                <p class="product-review-body">Aliquam nam gravida hendrerit primis class egestas primis porta egestas non eleifend risus turpis commodo nisi felis nullam risus aliquam curae fusce elit est ornare</p>
+                                <p class="text-success"><strong><i class="fa fa-check"></i> I would recommend this to a friend!</strong>
+                                </p>
+                                <ul class="list-inline product-review-actions">
+                                    <li><a href="#"><i class="fa fa-flag"></i> Flag this review</a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-comment"></i> Comment review</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </article>
+                        <article class="product-review">
+                            <div class="product-review-author">
+                                <img class="product-review-author-img" src="/static/img/70x70.png" alt="Image Alternative text" title="Image Title" />
+                            </div>
+                            <div class="product-review-content-full">
+                                <h5 class="product-review-title">Too Big. Unusable.</h5>
+                                <ul class="product-page-product-rating">
+                                    <li class="rated"><i class="fa fa-star"></i>
+                                    </li>
+                                    <li class="rated"><i class="fa fa-star"></i>
+                                    </li>
+                                    <li><i class="fa fa-star"></i>
+                                    </li>
+                                    <li><i class="fa fa-star"></i>
+                                    </li>
+                                    <li><i class="fa fa-star"></i>
+                                    </li>
+                                </ul>
+                                <p class="product-review-meta">by Keith Churchill on 08/14/2015</p>
+                                <p class="product-review-body">Lacus molestie aptent elementum nascetur a blandit aenean fusce eleifend hendrerit ac fringilla vehicula eget odio orci hac mauris tincidunt tellus</p>
+                                <p class="text-danger"><strong><i class="fa fa-close"></i> No, I would not recommend this to a friend.</strong>
+                                </p>
+                                <ul class="list-inline product-review-actions">
+                                    <li><a href="#"><i class="fa fa-flag"></i> Flag this review</a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-comment"></i> Comment review</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </article>
+                        <article class="product-review">
+                            <div class="product-review-author">
+                                <img class="product-review-author-img" src="/static/img/70x70.png" alt="Image Alternative text" title="Image Title" />
+                            </div>
+                            <div class="product-review-content-full">
+                                <h5 class="product-review-title">Worth it</h5>
+                                <ul class="product-page-product-rating">
+                                    <li class="rated"><i class="fa fa-star"></i>
+                                    </li>
+                                    <li class="rated"><i class="fa fa-star"></i>
+                                    </li>
+                                    <li class="rated"><i class="fa fa-star"></i>
+                                    </li>
+                                    <li class="rated"><i class="fa fa-star"></i>
+                                    </li>
+                                    <li class="rated"><i class="fa fa-star"></i>
+                                    </li>
+                                </ul>
+                                <p class="product-review-meta">by Alison Mackenzie on 08/14/2015</p>
+                                <p class="product-review-body">Imperdiet maecenas suspendisse diam lorem nisi quis elit augue mus interdum porttitor ante</p>
+                                <p class="text-success"><strong><i class="fa fa-check"></i> I would recommend this to a friend!</strong>
+                                </p>
+                                <ul class="list-inline product-review-actions">
+                                    <li><a href="#"><i class="fa fa-flag"></i> Flag this review</a>
+                                    </li>
+                                    <li><a href="#"><i class="fa fa-comment"></i> Comment review</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-4">
+                        <h3 class="product-tab-rating-title">Overall Customer Rating:</h3>
+                        <ul class="product-page-product-rating product-rating-big">
+                            <li class="rated"><i class="fa fa-star"></i>
+                            </li>
+                            <li class="rated"><i class="fa fa-star"></i>
+                            </li>
+                            <li class="rated"><i class="fa fa-star"></i>
+                            </li>
+                            <li class="rated"><i class="fa fa-star"></i>
+                            </li>
+                            <li class="rated"><i class="fa fa-star"></i>
+                            </li>
+                            <li class="count">4.9</li>
+                        </ul><small>238 customer reviews</small>
+                        <p><strong>98%</strong> of reviewers would recommend this product</p><a class="btn btn-primary" href="#">Write a Review</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="category-pagination-sign">238 customer reviews found. Showing 1 - 5</p>
+                    </div>
+                    <div class="col-md-6">
+                        <nav>
+                            <ul class="pagination category-pagination pull-right">
+                                <li class="active"><a href="#">1</a>
+                                </li>
+                                <li><a href="#">2</a>
+                                </li>
+                                <li><a href="#">3</a>
+                                </li>
+                                <li><a href="#">4</a>
+                                </li>
+                                <li><a href="#">5</a>
+                                </li>
+                                <li class="last"><a href="#"><i class="fa fa-long-arrow-right"></i></a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="gap"></div>
+    <h3 class="widget-title">You Might Also Like</h3>
+    <div class="row" data-gutter="15">
+        <div class="col-md-3" ng-repeat="product in products">
+            <single-product></single-product>
+        </div>
+    </div>
+</div>
+<div class="gap"></div>
+{% endblock %}

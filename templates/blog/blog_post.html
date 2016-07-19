@@ -1,0 +1,50 @@
+{% extends "shop/base.html" %}
+{% load staticfiles %}
+
+
+{% block content %}  
+<br>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">Add Supplier</h4>
+                </div>
+                <div class="panel-body">
+                    <form class="form" action="" method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label>Author</label>
+                            {{form.author.errors}}
+                            {{form.author}}
+                        </div>
+                        <div class="form-group">
+                            <label>Title</label>
+                            {{form.title.errors}}
+                            {{form.title}}
+                        </div>
+                        <div class="form-group">
+                            <label>Text</label>
+                            {{form.text.errors}}
+                            {{form.text}}
+                        </div>
+                        <div class="form-group">
+                            <label>Date Created</label>
+                            {{form.created_date.errors}}
+                            {{form.created_date}}
+                        </div>
+                        <div class="form-group">
+                            <label>Date Published</label>
+                            {{form.published_date.errors}}
+                            {{form.published_date}}
+                        </div>
+                        <div class="form-group">
+                            <input style="width:20%;" class="btn btn-success" type="submit" id="btn-success" value="Save" />
+                            <input class="btn btn-danger" type="button" onclick="window.location.replace('/items/')" value="Cancel" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

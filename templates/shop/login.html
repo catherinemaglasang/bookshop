@@ -1,0 +1,37 @@
+{% extends 'shop/base_shop.html' %}
+
+{% block content %}
+<div class="container">
+    <header class="page-header">
+        <h1 class="page-title">Member Login</h1>
+    </header>
+    <div class="row">
+    	<div class="col-md-6">
+		    <p>Welcome back, friend. Login to get started</p>
+		    <hr />
+		    <form>
+		        <div class="form-group">
+		            <label>Email or Username</label>
+		            <input class="form-control" type="text" />
+		        </div>
+		        <div class="form-group">
+		            <label>Password</label>
+		            <input class="form-control" type="text" />
+		        </div>
+		        <div class="checkbox">
+		            <label>
+		                <input class="i-check" type="checkbox" />Remeber Me</label>
+		        </div>
+		        <input class="btn btn-primary" type="submit" value="Sign In" />
+		    </form>
+		    <div class="gap gap-small"></div>
+		    <ul class="list-inline">
+		        <li><a href="{% url 'shop:register' %}">Not Member Yet</a>
+		        </li>
+		        <li><a href="#nav-pwd-dialog">Forgot Password?</a>
+		        </li>
+		    </ul>
+    	</div>
+    </div>
+</div>
+{% endblock %}

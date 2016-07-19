@@ -1,0 +1,19 @@
+{% extends 'shop/base.html' %}
+
+{% block content %}
+    <div class="col-md-8">
+		<h1>Blogs</h1>
+
+		{% if bloglen > 0 %}
+
+			{% for blog in blogs %}
+			<p>{{ blog.published_date }}</p>
+			<h1><a href="">{{ blog.title }}</a></h1>
+			<p>{{ blog.text|linebreaks }}</p>
+			{% endfor %}
+			
+		{% else %}
+		<p> Sorry! No blog for today.</p>
+		{% endif %}
+	</div>
+{% endblock %}

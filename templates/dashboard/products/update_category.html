@@ -1,0 +1,44 @@
+{% extends "dashboard/base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+<br><br>
+<form class="form form-horizontal" method="POST">                        
+    {% csrf_token %}
+    <div class="row">
+        <div class="col-md-8">
+            <div class="panel panel-default" style="margin-bottom:0">
+                <div class="panel-heading">Details & Description</div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        {{form.name.errors}}
+                        <label class="col-md-2 control-label">Name</label>
+                        <div class="col-md-10">
+                        {{form.name}}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        {{form.description.errors}}
+                        <label class="col-md-2 control-label">Description</label>
+                        <div class="col-md-10">
+                        {{form.description}}
+                        </div>
+                    </div>
+                </div>
+            </div>      
+        </div>
+    <br>
+    
+    <div class="row">
+        <div class="col-md-8 text-center">
+            <div class="form-group">
+                <input style="width:35%;" class="btn btn-success" type="submit" id="btn-success" value="Save" />
+                <input style="width:35%;" class="btn btn-danger" type="button" onclick="window.location.replace('/dashboard/category_list/')" value="Cancel" />
+            </div>
+        </div>
+    </div>
+</form>                    
+
+{% endblock content %}
+

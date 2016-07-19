@@ -1,0 +1,52 @@
+{% extends 'dashboard/base.html' %}
+
+{% block content %}
+    <div class="col-md-8">
+        {% if productAttributeLen > 0 %}
+            <h1>Product Attribute</h1>
+            <div class="col-lg-10"> 
+            <div>
+                <div class="input-group">
+                  <input type="text" name="q" class="form-control" placeholder="Search...">
+                  <span class="input-group-btn">
+                    <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
+                  </span>
+                </div>
+            </div>
+            <br>
+                <table id="productClasses-dt" class="table table-striped" cellspacing="0" width="100%">
+                    <thead>
+                        <tr style="background-color:#F5F5F5;">
+                            <th>Product Type</th>
+                            <th>Product Attribute Name</th>
+                            <th>Code</th>
+                            <th width="15%">Actions</th>
+                            
+                        </tr>
+                    </thead>            
+                    <tbody> 
+                        {% for pAttribute in productAttributes %}                
+                        <tr style="background:white;">                            
+                            <td><a href="/dashboard/add_productAttributeValue/">{{ pAttribute.productClass }}</td>
+                            <td><a href="/dashboard/add_productAttributeValue/">{{ pAttribute.name }}</td>
+                            <td><a href="/dashboard/add_productAttributeValue/">{{ pAttribute.code }}</td>
+                            <td>                           
+                                <a href="#" class="btn btn-info"><span class="glyphicon glyphicon-pencil"></span> </a>
+                                <button onclick="#" class="btn btn-danger" aria-label="Delete"><span class="glyphicon glyphicon-remove"></span></button>
+                            </td>               
+                        </tr> 
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+        {% else %}
+        <br><br>
+        <div class="col-sm-6">
+            <div class="alert alert-info" role="alert">
+              <h3 class="text-center">Product Attribute is currently empty  . </h3>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+{% endblock %}

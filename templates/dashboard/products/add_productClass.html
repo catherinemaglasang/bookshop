@@ -1,0 +1,29 @@
+{% extends "dashboard/base.html" %}
+{% load staticfiles %}
+
+
+{% block content %}  
+<br>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">Add Product</h4>
+                </div>
+                <br>
+                <div class="panel-body">
+                    <form class="form" action="" method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label>Product Type</label>
+                            {{form.name}}
+                            <input style="width:10%;" class="btn btn-success" type="submit" id="btn-success" value="Add" />
+                        </div>
+                       
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

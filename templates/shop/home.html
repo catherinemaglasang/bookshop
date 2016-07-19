@@ -1,0 +1,57 @@
+{% extends 'shop/base_shop.html' %}
+
+{% block content %}
+    <div class="owl-carousel owl-loaded owl-nav-dots-inner" data-options='{"items":1,"loop":true}'>
+        {% for promotion in promotions %}
+        <div class="owl-item">
+            <div class="slider-item" style="background-color:#3D3D3D;">
+                <div class="container">
+                    <div class="slider-item-inner">
+                        <div class="slider-item-caption-left slider-item-caption-white">
+                            <h4 class="slider-item-caption-title">{{ promotion.title }}</h4>
+                            <p class="slider-item-caption-desc">{{ promotion.description }}</p><a class="btn btn-lg btn-ghost btn-white" href="{{ promotion.btn_text }}">{{ promotion.btn_text }}</a>
+                        </div>
+                        <img class="slider-item-img-right" src="{{ promotion.primary_image }}" alt="{{ promotion.title }}" title="{{ promotion.title }}" style="top: 60%; width: 56%;" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="gap"></div>
+    <div class="container">
+        <div class="row" data-gutter="15">
+            {% for product in products %}
+            <div class="col-md-3">
+                <div class="product product-sm-left ">
+                    <ul class="product-labels"></ul>
+                    <div class="product-img-wrap">
+                        <img class="product-img" src="{{ product.primary_image }}" alt="{{ product.title }}"
+                             title="{{ product.title }}"/>
+                    </div>
+                    <a class="product-link" href="{{ product.link_url }}"></a>
+                    <div class="product-caption">
+                        <ul class="product-caption-rating">
+                            <li class="rated"><i class="fa fa-star"></i>
+                            </li>
+                            <li class="rated"><i class="fa fa-star"></i>
+                            </li>
+                            <li class="rated"><i class="fa fa-star"></i>
+                            </li>
+                            <li><i class="fa fa-star"></i>
+                            </li>
+                            <li><i class="fa fa-star"></i>
+                            </li>
+                        </ul>
+                        <h5 class="product-caption-title">{{ product.title }}</h5>
+                        <div class="product-caption-price"><span class="product-caption-price-old">${{ product.price_old }}</span><span
+                                class="product-caption-price-new">${{ product.current_price }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="gap"></div>
+{% endblock content %}

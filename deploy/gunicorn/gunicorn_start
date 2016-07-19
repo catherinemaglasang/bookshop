@@ -1,0 +1,23 @@
+#!/bin/bash
+
+NAME="bookshop"
+DJANGODIR=/home/roselle/sites/bookshop
+USER=roselle
+NUM_WORKERS=5
+DJANGO_SETTINGS_MODULE=settings.local
+DJANGO_WSGI_MODULE=config.wsgi
+
+echo "Starting $NAME as `whoami`"
+
+cd $DJANGODIR
+source /home/roselle/sites/bookshop/venv/bin/activate
+export DJANGO_SETTINGS_MODULE=$DJANGO_SETTINGS_MODULE
+export PYTHONPATH=$DJANGODIR:$PYTHONPATH
+
+exec /home/roselle/sites/bookshop/venv/bin/gunicorn ${DJANGO_WSGI_MODULE}:application \
+  --name $NAME \
+  --workers $NUM_WORKERS \
+  --user=$USER \
+  --bind=0.0.0.0:9000 \
+  --log-level=debug \
+  --log-file=/home/roselle/sites/bookshop/deploy/logs/gunicorn.log

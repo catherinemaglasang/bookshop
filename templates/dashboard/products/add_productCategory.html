@@ -1,0 +1,35 @@
+{% extends "dashboard/base.html" %}
+
+{% load staticfiles %}
+
+
+{% block content %}  
+<br>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">Add Product Category</h4>
+                </div>
+                <div class="panel-body">
+                    <form class="form" action="" method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label>Product</label>
+                            {{form.product}}
+                        </div>
+                        <div class="form-group">
+                            <label>Category</label>
+                            {{form.category}}
+                            <a href="/dashboard/add_category">NEW</a>
+                        </div>
+                        <div class="form-group">
+                            <input style="width:20%;" class="btn btn-success" type="submit" id="btn-success" value="Save" />
+                            <input class="btn btn-danger" type="button" onclick="window.location.replace('/dashboard/add_productAttributeValue/')" value="Cancel" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

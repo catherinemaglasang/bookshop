@@ -1,0 +1,44 @@
+{% extends 'dashboard/base.html' %}
+
+{% block content %}
+    <div class="col-md-8">
+		<h1>Product Class</h1>
+
+		{% if productClassLen > 0 %}
+
+			<div class="col-lg-10"> 
+			<div>
+				<div class="input-group">
+	              <input type="text" name="q" class="form-control" placeholder="Search...">
+	              <span class="input-group-btn">
+	                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
+	              </span>
+	            </div>
+			</div>
+			<br>
+	            <table id="productClasses-dt" class="table table-striped" cellspacing="0" width="100%">
+	                <thead>
+	                    <tr style="background-color:#F5F5F5;">
+	                        <th>Product Type</th>
+	                        <th width="15%">Actions</th>
+	                    </tr>
+	                </thead>            
+	                <tbody> 
+	                    {% for pClass in productClasses %}                
+	                    <tr style="background:white;">                            
+	                        <td><a href="/dashboard/add_productAttribute/">{{ pClass.name }}</td>
+	                        <td>                           
+	                            <a href="#" class="btn btn-info"><span class="glyphicon glyphicon-pencil"></span> </a>
+	                            <button onclick="#" class="btn btn-danger" aria-label="Delete"><span class="glyphicon glyphicon-remove"></span></button>
+	                        </td>               
+	                    </tr> 
+	                    {% endfor %}
+	                </tbody>
+	            </table>
+	        </div>
+
+		{% else %}
+		<p> Product Class is currently empty.</p>
+		{% endif %}
+	</div>
+{% endblock %}

@@ -1,0 +1,1006 @@
+{% extends 'shop/base_shop.html' %}
+
+{% block content %}
+<div class="container">
+    <header class="page-header">
+        <h1 class="page-title">Category</h1>
+    </header>
+    <div class="row">
+        <div class="col-md-3">
+            <aside class="category-filters">
+                <div class="category-filters-section">
+                    <h3 class="widget-title-sm">Category</h3>
+                    <ul class="cateogry-filters-list">
+                        <li><a href="#/">Clothing</a>
+                        </li>
+                        <li><a href="#/">Shoes</a>
+                        </li>
+                        <li><a href="#/">Accessories</a>
+                        </li>
+                        <li><a href="#/">Jewerly</a>
+                        </li>
+                        <li><a href="#/">Watches</a>
+                        </li>
+                        <li><a href="#/">Fine Jewerly</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="category-filters-section">
+                    <h3 class="widget-title-sm">Price</h3>
+                    <input type="text" id="price-slider"
+                        price-slider="{min: 130,
+                        max: 575,
+                        type: 'double',
+                        prefix: '$',
+                        prettify: false,
+                        hasGrid: false}"/>
+                </div>
+                <div class="category-filters-section">
+                    <h3 class="widget-title-sm">Relese Date</h3>
+                    <div class="checkbox">
+                        <label>
+                            <input i-check="" class="i-check" type="checkbox" />Last 30 days<span class="category-filters-amount">(51)</span>
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input i-check="" class="i-check" type="checkbox" />Last 90 days<span class="category-filters-amount">(71)</span>
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input i-check="" class="i-check" type="checkbox" />Comming Soon<span class="category-filters-amount">(71)</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="category-filters-section">
+                    <h3 class="widget-title-sm">Brand</h3>
+                    <div class="checkbox" ng-repeat="brand in brands">
+                        <label>
+                            <input i-check="" class="i-check" type="checkbox" />{{ brand.title }}<span class="category-filters-amount">({{ brand.item_count }})</span>
+                        </label>
+                    </div>
+                </div>
+            </aside>
+        </div>
+        <div class="col-md-9">
+            <div class="row row-sm-gap" data-gutter="10">
+                <div class="col-md-2">
+                    <div class="product product-sm ">
+                        <div class="product-img-wrap">
+                            <img class="product-img" src="static/img/500x500.png" alt="Image Alternative text" title="Image Title" />
+                        </div>
+                        <a class="product-link" href="#/"></a>
+                        <div class="product-caption">
+                            <ul class="product-caption-rating">
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                            </ul>
+                            <h5 class="product-caption-title">Lady's Women's Golden Band Dial Bracelet Style Quartz Analog Wrist Watch</h5>
+                            <div class="product-caption-price"><span class="product-caption-price-new">$53</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="product product-sm ">
+                        <div class="product-img-wrap">
+                            <img class="product-img" src="static/img/500x500.png" alt="Image Alternative text" title="Image Title" />
+                        </div>
+                        <a class="product-link" href="#/"></a>
+                        <div class="product-caption">
+                            <ul class="product-caption-rating">
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                            </ul>
+                            <h5 class="product-caption-title">Jessica Simpson Women's Single Breasted Belted Peacoat Jacket Coat</h5>
+                            <div class="product-caption-price"><span class="product-caption-price-old">$98</span><span class="product-caption-price-new">$49</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="product product-sm ">
+                        <div class="product-img-wrap">
+                            <img class="product-img" src="static/img/500x500.png" alt="Image Alternative text" title="Image Title" />
+                        </div>
+                        <a class="product-link" href="#/"></a>
+                        <div class="product-caption">
+                            <ul class="product-caption-rating">
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                            </ul>
+                            <h5 class="product-caption-title">WENGER WOMEN'S STAINLESS STEEL DATE NEW WATCH 0721.102</h5>
+                            <div class="product-caption-price"><span class="product-caption-price-new">$104</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="product product-sm ">
+                        <div class="product-img-wrap">
+                            <img class="product-img" src="static/img/500x500.png" alt="Image Alternative text" title="Image Title" />
+                        </div>
+                        <a class="product-link" href="#/"></a>
+                        <div class="product-caption">
+                            <ul class="product-caption-rating">
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                            </ul>
+                            <h5 class="product-caption-title">Dooney & Bourke Pebble Grain Hobo</h5>
+                            <div class="product-caption-price"><span class="product-caption-price-new">$70</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="product product-sm ">
+                        <div class="product-img-wrap">
+                            <img class="product-img" src="static/img/500x500.png" alt="Image Alternative text" title="Image Title" />
+                        </div>
+                        <a class="product-link" href="#/"></a>
+                        <div class="product-caption">
+                            <ul class="product-caption-rating">
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                            </ul>
+                            <h5 class="product-caption-title">ASICS Women's 2015 LAM 33-DFA Running Shoes T55AQ</h5>
+                            <div class="product-caption-price"><span class="product-caption-price-new">$128</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="product product-sm ">
+                        <div class="product-img-wrap">
+                            <img class="product-img" src="static/img/500x500.png" alt="Image Alternative text" title="Image Title" />
+                        </div>
+                        <a class="product-link" href="#/"></a>
+                        <div class="product-caption">
+                            <ul class="product-caption-rating">
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                            </ul>
+                            <h5 class="product-caption-title">Timex Women's | Elevated Classics Swarovski Crystals Black Strap | Watch T2N450</h5>
+                            <div class="product-caption-price"><span class="product-caption-price-old">$118</span><span class="product-caption-price-new">$48</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-sm-gap" data-gutter="10">
+                <div class="col-md-2">
+                    <div class="product product-sm ">
+                        <div class="product-img-wrap">
+                            <img class="product-img" src="static/img/500x500.png" alt="Image Alternative text" title="Image Title" />
+                        </div>
+                        <a class="product-link" href="#/"></a>
+                        <div class="product-caption">
+                            <ul class="product-caption-rating">
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                            </ul>
+                            <h5 class="product-caption-title">Dooney & Bourke Claremont Field Bag</h5>
+                            <div class="product-caption-price"><span class="product-caption-price-new">$72</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="product product-sm ">
+                        <div class="product-img-wrap">
+                            <img class="product-img" src="static/img/500x500.png" alt="Image Alternative text" title="Image Title" />
+                        </div>
+                        <a class="product-link" href="#/"></a>
+                        <div class="product-caption">
+                            <ul class="product-caption-rating">
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                            </ul>
+                            <h5 class="product-caption-title">Fossil Women's Original Boyfriend ES3380 Rose-Gold Stainless-Steel Quartz Watch</h5>
+                            <div class="product-caption-price"><span class="product-caption-price-new">$100</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="product product-sm ">
+                        <div class="product-img-wrap">
+                            <img class="product-img" src="static/img/500x500.png" alt="Image Alternative text" title="Image Title" />
+                        </div>
+                        <a class="product-link" href="#/"></a>
+                        <div class="product-caption">
+                            <ul class="product-caption-rating">
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                            </ul>
+                            <h5 class="product-caption-title">PUMA Cell Riaze Mesh Women's Running Shoes</h5>
+                            <div class="product-caption-price"><span class="product-caption-price-new">$131</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="product product-sm ">
+                        <div class="product-img-wrap">
+                            <img class="product-img" src="static/img/500x500.png" alt="Image Alternative text" title="Image Title" />
+                        </div>
+                        <a class="product-link" href="#/"></a>
+                        <div class="product-caption">
+                            <ul class="product-caption-rating">
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                            </ul>
+                            <h5 class="product-caption-title">Bulova Women's Dress 98V02 Silver Stainless-Steel Quartz Watch</h5>
+                            <div class="product-caption-price"><span class="product-caption-price-old">$115</span><span class="product-caption-price-new">$46</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="product product-sm ">
+                        <div class="product-img-wrap">
+                            <img class="product-img" src="static/img/2100x2100.png" alt="Image Alternative text" title="Image Title" />
+                        </div>
+                        <a class="product-link" href="#/"></a>
+                        <div class="product-caption">
+                            <ul class="product-caption-rating">
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                            </ul>
+                            <h5 class="product-caption-title">Easy Spirit Dobey Low Heel Wedges</h5>
+                            <div class="product-caption-price"><span class="product-caption-price-new">$121</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="product product-sm ">
+                        <div class="product-img-wrap">
+                            <img class="product-img" src="static/img/500x500.png" alt="Image Alternative text" title="Image Title" />
+                        </div>
+                        <a class="product-link" href="#/"></a>
+                        <div class="product-caption">
+                            <ul class="product-caption-rating">
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                            </ul>
+                            <h5 class="product-caption-title">PUMA Faas 700 v2 Women's Running Shoes</h5>
+                            <div class="product-caption-price"><span class="product-caption-price-old">$60</span><span class="product-caption-price-new">$42</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-sm-gap" data-gutter="10">
+                <div class="col-md-2">
+                    <div class="product product-sm ">
+                        <div class="product-img-wrap">
+                            <img class="product-img" src="static/img/500x500.png" alt="Image Alternative text" title="Image Title" />
+                        </div>
+                        <a class="product-link" href="#/"></a>
+                        <div class="product-caption">
+                            <ul class="product-caption-rating">
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                            </ul>
+                            <h5 class="product-caption-title">Vera Bradley Vera Tote Bag</h5>
+                            <div class="product-caption-price"><span class="product-caption-price-new">$65</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="product product-sm ">
+                        <div class="product-img-wrap">
+                            <img class="product-img" src="static/img/500x500.png" alt="Image Alternative text" title="Image Title" />
+                        </div>
+                        <a class="product-link" href="#/"></a>
+                        <div class="product-caption">
+                            <ul class="product-caption-rating">
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                            </ul>
+                            <h5 class="product-caption-title">Dooney & Bourke Chevron Large Slim Wristlet</h5>
+                            <div class="product-caption-price"><span class="product-caption-price-new">$89</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="product product-sm ">
+                        <div class="product-img-wrap">
+                            <img class="product-img" src="static/img/500x500.png" alt="Image Alternative text" title="Image Title" />
+                        </div>
+                        <a class="product-link" href="#/"></a>
+                        <div class="product-caption">
+                            <ul class="product-caption-rating">
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                            </ul>
+                            <h5 class="product-caption-title">New Authentic Gucci Patent Leather Open Toe Platform Pump,Gren, 309984 3125</h5>
+                            <div class="product-caption-price"><span class="product-caption-price-old">$98</span><span class="product-caption-price-new">$59</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="product product-sm ">
+                        <div class="product-img-wrap">
+                            <img class="product-img" src="static/img/500x500.png" alt="Image Alternative text" title="Image Title" />
+                        </div>
+                        <a class="product-link" href="#/"></a>
+                        <div class="product-caption">
+                            <ul class="product-caption-rating">
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                            </ul>
+                            <h5 class="product-caption-title">ASICS Women's Gel-Noosa Tri 9 Running Shoe Black/Neon Coral/Green</h5>
+                            <div class="product-caption-price"><span class="product-caption-price-old">$150</span><span class="product-caption-price-new">$75</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="product product-sm ">
+                        <div class="product-img-wrap">
+                            <img class="product-img" src="static/img/500x500.png" alt="Image Alternative text" title="Image Title" />
+                        </div>
+                        <a class="product-link" href="#/"></a>
+                        <div class="product-caption">
+                            <ul class="product-caption-rating">
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                            </ul>
+                            <h5 class="product-caption-title">Dooney & Bourke Pebble Grain Hobo</h5>
+                            <div class="product-caption-price"><span class="product-caption-price-new">$106</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="product product-sm ">
+                        <div class="product-img-wrap">
+                            <img class="product-img" src="static/img/500x500.png" alt="Image Alternative text" title="Image Title" />
+                        </div>
+                        <a class="product-link" href="#/"></a>
+                        <div class="product-caption">
+                            <ul class="product-caption-rating">
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                            </ul>
+                            <h5 class="product-caption-title">Bulova Fairlawn Women's Quartz Watch 96R160</h5>
+                            <div class="product-caption-price"><span class="product-caption-price-new">$150</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-sm-gap" data-gutter="10">
+                <div class="col-md-2">
+                    <div class="product product-sm ">
+                        <div class="product-img-wrap">
+                            <img class="product-img" src="static/img/500x500.png" alt="Image Alternative text" title="Image Title" />
+                        </div>
+                        <a class="product-link" href="#/"></a>
+                        <div class="product-caption">
+                            <ul class="product-caption-rating">
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                            </ul>
+                            <h5 class="product-caption-title">ASICS Women's GEL-Equation 7 Running Shoes T3F6N</h5>
+                            <div class="product-caption-price"><span class="product-caption-price-old">$93</span><span class="product-caption-price-new">$47</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="product product-sm ">
+                        <div class="product-img-wrap">
+                            <img class="product-img" src="static/img/500x500.png" alt="Image Alternative text" title="Image Title" />
+                        </div>
+                        <a class="product-link" href="#/"></a>
+                        <div class="product-caption">
+                            <ul class="product-caption-rating">
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                            </ul>
+                            <h5 class="product-caption-title">TechnoMarine Sea Pearl Women's Quartz Watch 714001</h5>
+                            <div class="product-caption-price"><span class="product-caption-price-new">$55</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="product product-sm ">
+                        <div class="product-img-wrap">
+                            <img class="product-img" src="static/img/500x500.png" alt="Image Alternative text" title="Image Title" />
+                        </div>
+                        <a class="product-link" href="#/"></a>
+                        <div class="product-caption">
+                            <ul class="product-caption-rating">
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                            </ul>
+                            <h5 class="product-caption-title">Vera Bradley Mandy Tote Bag</h5>
+                            <div class="product-caption-price"><span class="product-caption-price-old">$146</span><span class="product-caption-price-new">$59</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="product product-sm ">
+                        <div class="product-img-wrap">
+                            <img class="product-img" src="static/img/500x500.png" alt="Image Alternative text" title="Image Title" />
+                        </div>
+                        <a class="product-link" href="#/"></a>
+                        <div class="product-caption">
+                            <ul class="product-caption-rating">
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                            </ul>
+                            <h5 class="product-caption-title">Hanes Women's Relaxed Fit Jersey ComfortSoft&reg; Crewneck T-Shirt style 5680</h5>
+                            <div class="product-caption-price"><span class="product-caption-price-old">$80</span><span class="product-caption-price-new">$24</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="product product-sm ">
+                        <div class="product-img-wrap">
+                            <img class="product-img" src="static/img/500x500.png" alt="Image Alternative text" title="Image Title" />
+                        </div>
+                        <a class="product-link" href="#/"></a>
+                        <div class="product-caption">
+                            <ul class="product-caption-rating">
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                            </ul>
+                            <h5 class="product-caption-title">Mizuno Wave Universe 5 Women's Running Shoes Sneakers</h5>
+                            <div class="product-caption-price"><span class="product-caption-price-new">$137</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="product product-sm ">
+                        <div class="product-img-wrap">
+                            <img class="product-img" src="static/img/500x500.png" alt="Image Alternative text" title="Image Title" />
+                        </div>
+                        <a class="product-link" href="#/"></a>
+                        <div class="product-caption">
+                            <ul class="product-caption-rating">
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                            </ul>
+                            <h5 class="product-caption-title">Dooney & Bourke Pebble Grain Lexington</h5>
+                            <div class="product-caption-price"><span class="product-caption-price-new">$132</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-sm-gap" data-gutter="10">
+                <div class="col-md-2">
+                    <div class="product product-sm ">
+                        <div class="product-img-wrap">
+                            <img class="product-img" src="static/img/500x500.png" alt="Image Alternative text" title="Image Title" />
+                        </div>
+                        <a class="product-link" href="#/"></a>
+                        <div class="product-caption">
+                            <ul class="product-caption-rating">
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                            </ul>
+                            <h5 class="product-caption-title">Dooney & Bourke Claremont Dover</h5>
+                            <div class="product-caption-price"><span class="product-caption-price-new">$72</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="product product-sm ">
+                        <div class="product-img-wrap">
+                            <img class="product-img" src="static/img/500x500.png" alt="Image Alternative text" title="Image Title" />
+                        </div>
+                        <a class="product-link" href="#/"></a>
+                        <div class="product-caption">
+                            <ul class="product-caption-rating">
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                            </ul>
+                            <h5 class="product-caption-title">PUMA Faas 700 v2 Women's Running Shoes</h5>
+                            <div class="product-caption-price"><span class="product-caption-price-old">$111</span><span class="product-caption-price-new">$89</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="product product-sm ">
+                        <div class="product-img-wrap">
+                            <img class="product-img" src="static/img/500x500.png" alt="Image Alternative text" title="Image Title" />
+                        </div>
+                        <a class="product-link" href="#/"></a>
+                        <div class="product-caption">
+                            <ul class="product-caption-rating">
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                            </ul>
+                            <h5 class="product-caption-title">ASICS Women's Gel-Noosa Tri 9 Running Shoe Black/Neon Coral/Green</h5>
+                            <div class="product-caption-price"><span class="product-caption-price-new">$111</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="product product-sm ">
+                        <div class="product-img-wrap">
+                            <img class="product-img" src="static/img/500x500.png" alt="Image Alternative text" title="Image Title" />
+                        </div>
+                        <a class="product-link" href="#/"></a>
+                        <div class="product-caption">
+                            <ul class="product-caption-rating">
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                            </ul>
+                            <h5 class="product-caption-title">Fossil Women's Original Boyfriend ES3380 Rose-Gold Stainless-Steel Quartz Watch</h5>
+                            <div class="product-caption-price"><span class="product-caption-price-new">$99</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="product product-sm ">
+                        <div class="product-img-wrap">
+                            <img class="product-img" src="static/img/500x500.png" alt="Image Alternative text" title="Image Title" />
+                        </div>
+                        <a class="product-link" href="#/"></a>
+                        <div class="product-caption">
+                            <ul class="product-caption-rating">
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                            </ul>
+                            <h5 class="product-caption-title">Lady's Women's Golden Band Dial Bracelet Style Quartz Analog Wrist Watch</h5>
+                            <div class="product-caption-price"><span class="product-caption-price-new">$126</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="product product-sm ">
+                        <div class="product-img-wrap">
+                            <img class="product-img" src="static/img/2100x2100.png" alt="Image Alternative text" title="Image Title" />
+                        </div>
+                        <a class="product-link" href="#/"></a>
+                        <div class="product-caption">
+                            <ul class="product-caption-rating">
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                            </ul>
+                            <h5 class="product-caption-title">Easy Spirit Dobey Low Heel Wedges</h5>
+                            <div class="product-caption-price"><span class="product-caption-price-new">$54</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-sm-gap" data-gutter="10">
+                <div class="col-md-2">
+                    <div class="product product-sm ">
+                        <div class="product-img-wrap">
+                            <img class="product-img" src="static/img/500x500.png" alt="Image Alternative text" title="Image Title" />
+                        </div>
+                        <a class="product-link" href="#/"></a>
+                        <div class="product-caption">
+                            <ul class="product-caption-rating">
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                            </ul>
+                            <h5 class="product-caption-title">Jessica Simpson Women's Single Breasted Belted Peacoat Jacket Coat</h5>
+                            <div class="product-caption-price"><span class="product-caption-price-new">$74</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="product product-sm ">
+                        <div class="product-img-wrap">
+                            <img class="product-img" src="static/img/500x500.png" alt="Image Alternative text" title="Image Title" />
+                        </div>
+                        <a class="product-link" href="#/"></a>
+                        <div class="product-caption">
+                            <ul class="product-caption-rating">
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                            </ul>
+                            <h5 class="product-caption-title">Dooney & Bourke Pebble Grain Hobo</h5>
+                            <div class="product-caption-price"><span class="product-caption-price-new">$116</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="product product-sm ">
+                        <div class="product-img-wrap">
+                            <img class="product-img" src="static/img/500x500.png" alt="Image Alternative text" title="Image Title" />
+                        </div>
+                        <a class="product-link" href="#/"></a>
+                        <div class="product-caption">
+                            <ul class="product-caption-rating">
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                            </ul>
+                            <h5 class="product-caption-title">TechnoMarine Sea Pearl Women's Quartz Watch 714001</h5>
+                            <div class="product-caption-price"><span class="product-caption-price-old">$63</span><span class="product-caption-price-new">$32</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="product product-sm ">
+                        <div class="product-img-wrap">
+                            <img class="product-img" src="static/img/500x500.png" alt="Image Alternative text" title="Image Title" />
+                        </div>
+                        <a class="product-link" href="#/"></a>
+                        <div class="product-caption">
+                            <ul class="product-caption-rating">
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                            </ul>
+                            <h5 class="product-caption-title">Dooney & Bourke Chevron Large Slim Wristlet</h5>
+                            <div class="product-caption-price"><span class="product-caption-price-new">$141</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="product product-sm ">
+                        <div class="product-img-wrap">
+                            <img class="product-img" src="static/img/500x500.png" alt="Image Alternative text" title="Image Title" />
+                        </div>
+                        <a class="product-link" href="#/"></a>
+                        <div class="product-caption">
+                            <ul class="product-caption-rating">
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                            </ul>
+                            <h5 class="product-caption-title">Bulova Women's Dress 98V02 Silver Stainless-Steel Quartz Watch</h5>
+                            <div class="product-caption-price"><span class="product-caption-price-new">$133</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="product product-sm ">
+                        <div class="product-img-wrap">
+                            <img class="product-img" src="static/img/500x500.png" alt="Image Alternative text" title="Image Title" />
+                        </div>
+                        <a class="product-link" href="#/"></a>
+                        <div class="product-caption">
+                            <ul class="product-caption-rating">
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li class="rated"><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                            </ul>
+                            <h5 class="product-caption-title">ASICS Women's GEL-Equation 7 Running Shoes T3F6N</h5>
+                            <div class="product-caption-price"><span class="product-caption-price-old">$122</span><span class="product-caption-price-new">$49</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="category-pagination-sign">58 items found in Cell Phones. Showing 1 - 12</p>
+                </div>
+                <div class="col-md-6">
+                    <nav>
+                        <ul class="pagination category-pagination pull-right">
+                            <li class="active"><a href="#/">1</a>
+                            </li>
+                            <li><a href="#/">2</a>
+                            </li>
+                            <li><a href="#/">3</a>
+                            </li>
+                            <li><a href="#/">4</a>
+                            </li>
+                            <li><a href="#/">5</a>
+                            </li>
+                            <li class="last"><a href="#/"><i class="fa fa-long-arrow-right"></i></a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="gap"></div>
+{% endblock %}
